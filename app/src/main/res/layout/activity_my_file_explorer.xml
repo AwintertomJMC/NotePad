@@ -29,9 +29,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:id="@+id/newFolderButton"
-            android:text="@string/file_explorer_new_folder"
-            android:onClick="createFolder"/>
+            android:id="@+id/fileExplorerPopUpButton"
+            android:text="@string/file_explorer_popup_menu_button"
+            android:onClick="showPopUpMenuInFileExplorer" />
+
     </LinearLayout>
 <androidx.recyclerview.widget.RecyclerView
     android:layout_width="match_parent"

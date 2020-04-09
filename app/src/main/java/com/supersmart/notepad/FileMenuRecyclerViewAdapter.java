@@ -14,9 +14,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.supersmart.notepad.R;
-
 import java.io.File;
+import java.util.Arrays;
 
 public class FileMenuRecyclerViewAdapter extends RecyclerView.Adapter<FileMenuRecyclerViewAdapter.FileDirectoryViewHolder> {
     private LayoutInflater layoutInflater;
@@ -26,6 +25,7 @@ public class FileMenuRecyclerViewAdapter extends RecyclerView.Adapter<FileMenuRe
     EditText fileNameEditText;//用来和MyFileExplorerActivity联动
     TextView filePathTextView;
     EditText fileTypeEditText;
+    boolean sorted;
 //    static final String BASEPATH = "/storage/emulated/0";
     FileMenuRecyclerViewAdapter(Context context)
     {
@@ -43,6 +43,8 @@ public class FileMenuRecyclerViewAdapter extends RecyclerView.Adapter<FileMenuRe
             currentDirectory = new File(Environment.getExternalStorageState());
         }
         fileList = currentDirectory.listFiles();
+        Arrays.sort(fileList, FileComparator.fileComparatorByName);
+        sorted = true;
         parentDirectory = currentDirectory.getParentFile();
     }
 
@@ -60,7 +62,7 @@ public class FileMenuRecyclerViewAdapter extends RecyclerView.Adapter<FileMenuRe
     @NonNull
     @Override
     public FileDirectoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {//创建View时的操作
-        View view = layoutInflater.inflate(R.layout.layout_filemenu,null);//把布局文件给到一个view里，再返回holder
+        View view = layoutInflater.inflate(R.layout.layout_filelist,null);//把布局文件给到一个view里，再返回holder
         return new FileDirectoryViewHolder(view);
     }
 

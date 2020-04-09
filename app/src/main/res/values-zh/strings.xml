@@ -46,4 +46,6 @@
     <string name="file_explorer_dialog_title3">文件覆盖警告</string>
     <string name="file_explorer_dialog_message2">该文件大小超过100K(实际大小为%1$s），打开时可能会变慢、卡死、闪退,是否继续打开？</string>
     <string name="file_explorer_dialog_message3">该文件%1$s已经存在，是否继续保存？</string>
+    <string name="file_explorer_popup_menu_button">菜单</string>
+    <string name="file_explorer_sort_button">排序</string>
 </resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:background="@drawable/button_clicked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/newFolderButton"
+        android:text="@string/file_explorer_new_folder"
+        android:onClick="createFolder"/>
+    <Button
+        android:background="@drawable/button_clicked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sortButton"
+        android:text="@string/file_explorer_sort_button"
+        android:onClick="sort"/>
+</LinearLayout>

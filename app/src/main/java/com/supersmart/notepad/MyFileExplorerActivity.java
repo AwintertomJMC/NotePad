@@ -8,14 +8,19 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
+import java.util.Arrays;
 
 import static com.supersmart.notepad.CharsetNames.standardCharsetsNames;
 
@@ -25,6 +30,8 @@ public class MyFileExplorerActivity extends AppCompatActivity {
     private int mode;
     private String[] sizes = {"B","KB","MB","GB","TB"};
     private TextView encodingTextView;
+    private PopupWindow popupWindow;
+    private boolean popupShowing;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +67,17 @@ public class MyFileExplorerActivity extends AppCompatActivity {
         ((TextView) findViewById(R.id.currentDirTextView)).setText(fileMenuRecyclerViewAdapter.currentDirectory.getAbsolutePath());
         encodingTextView = findViewById(R.id.encodingTextView);
         encodingTextView.setText(getIntent().getStringExtra("encoding"));
+
+        popupWindow = new PopupWindow(null, LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.WRAP_CONTENT);
+        popupWindow.setContentView(LayoutInflater.from(this).inflate(R.layout.layout_file_explorer_menu,null));
+        popupWindow.setOutsideTouchable(true);
+        popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
+            @Override
+            public void onDismiss() {
+                popupShowing = false;
+            }
+        });
+        popupWindow.setBackgroundDrawable(new BitmapDrawable());
     }
     public void goBack(View view)
     {
@@ -170,6 +188,36 @@ public class MyFileExplorerActivity extends AppCompatActivity {
         builder.create().show();
 
     }
+    public void sort(View view)
+    {
+        if(!fileMenuRecyclerViewAdapter.sorted)
+        {
+            Arrays.sort(fileMenuRecyclerViewAdapter.fileList,FileComparator.fileComparatorByName);
+        }
+        else
+        {
+            for (int i=0;i<fileMenuRecyclerViewAdapter.fileList.length/2;++i)
+            {
+                File temp1 = fileMenuRecyclerViewAdapter.fileList[i];
+                fileMenuRecyclerViewAdapter.fileList[i] = fileMenuRecyclerViewAdapter.fileList[fileMenuRecyclerViewAdapter.fileList.length-1-i];
+                fileMenuRecyclerViewAdapter.fileList[fileMenuRecyclerViewAdapter.fileList.length-1-i] = temp1;
+            }
+        }
+        fileMenuRecyclerViewAdapter.notifyDataSetChanged();
+    }
+    public void showPopUpMenuInFileExplorer(View view)
+    {
+        if(popupShowing)
+        {
+            popupWindow.dismiss();
+            popupShowing = false;
+        }
+        else
+        {
+            popupWindow.showAsDropDown(view,0,0);
+            popupShowing = true;
+        }
+    }
     public void chooseCharset(View view)
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -250,5 +298,14 @@ public class MyFileExplorerActivity extends AppCompatActivity {
         intent.putExtra("encoding",encodingTextView.getText().toString());
         setResult(RESULT_OK,intent);
         finish();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if(popupWindow != null)
+        {
+            popupWindow.dismiss();
+        }
     }
 }

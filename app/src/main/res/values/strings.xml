@@ -46,5 +46,7 @@
     <string name="file_explorer_dialog_title3">File overwrite warning</string>
     <string name="file_explorer_dialog_message2">The file size is larger than 100K(actually size:%1$s).Loading it may slow down or crash the app.Continue to open?</string>
     <string name="file_explorer_dialog_message3">The file %1$s already exists, continue to save?</string>
+    <string name="file_explorer_popup_menu_button">Menu</string>
+    <string name="file_explorer_sort_button">Sort</string>
 
 </resources>
