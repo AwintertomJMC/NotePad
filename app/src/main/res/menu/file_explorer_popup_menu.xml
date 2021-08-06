@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/newFolderButton" android:title="@string/file_explorer_new_folder" android:onClick="createFolder"/>
+    <item android:id="@+id/sortButton" android:title="@string/file_explorer_sort_button" android:onClick="sort"/>
+</menu>

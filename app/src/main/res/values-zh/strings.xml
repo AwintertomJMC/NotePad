@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">记事本</string>
+    <string name="quit_app">退出应用</string>
+    <string name="open_file">打开</string>
+    <string name="save_file">保存</string>
+    <string name="save_as">另存为</string>
+    <string name="new_file">新文件</string>
+    <string name="menu_button">菜单</string>
+    <string name="pre_dir">上一目录</string>
+    <string name="file_explorer_title_read">打开文件</string>
+    <string name="file_explorer_new_folder">新建文件夹</string>
+    <string name="file_explorer_current_dir">当前目录：</string>
+    <string name="file_explorer_file_name_hint">文件名称:</string>
+    <string name="file_explorer_file_type_hint">文件类型：</string>
+    <string name="ok_button">确定</string>
+    <string name="file_explorer_encoding">编码：</string>
+    <string name="file_explorer_encoding_unknown">未知</string>
+    <string name="file_explorer_not_impl">点击选择编码</string>
+    <string name="cancel_button">取消</string>
+    <string name="file_menu_icon">图标</string>
+    <string name="file_menu_filename">目录文件名</string>
+    <string name="save_file_dialog_title1">保存文件对话框</string>
+    <string name="save_file_dialog_message1">是否保存当前文档:%1$s?</string>
+    <string name="save_file_dialog_message2">确认保存文件到%1$s吗？</string>
+    <string name="save_file_dialog_pos_button1">是，并建立新文档</string>
+    <string name="save_file_dialog_neg_button1">否，并建立新文档</string>
+    <string name="cannot_open_file_toast1">文件:%1$s不存在或路径找不到</string>
+    <string name="charset_select">选择字符集</string>
+    <string name="select_encoding_title">选择以什么编码打开文件</string>
+    <string name="save_file_success_toast1">保存文件%1$s成功!</string>
+    <string name="new_file_name">新文件</string>
+    <string name="save_file_dialog_title2">保存文件提示</string>
+    <string name="save_file_dialog_warning">你保存的文件可能不是文本型文件。
+        如果保存到原来的文件，很可能会造成文件内容缺失、保存后无法正常打开的问题。
+        建议使用“另存为”按钮保存到别处。</string>
+    <string name="file_explorer_title_save">保存文件</string>
+    <string name="file_explorer_root_dir_toast">已达到目前的根目录!</string>
+    <string name="file_explorer_file_cannot_found_toast">文件不存在:%1$s</string>
+    <string name="file_explorer_dialog_title1">创建文件夹</string>
+    <string name="file_explorer_dialog_message1">请输入文件夹名</string>
+    <string name="file_explorer_dir_already_exists_toast">文件夹%1$s已存在</string>
+    <string name="file_explorer_dir_create_success_toast">创建文件夹:%1$s成功</string>
+    <string name="file_explorer_dir_create_failed_toast">创建文件夹:%1$s失败</string>
+    <string name="file_explorer_dialog_title2">文件过大提示</string>
+    <string name="file_explorer_dialog_title3">文件覆盖警告</string>
+    <string name="file_explorer_dialog_message2">该文件大小超过100K(实际大小为%1$s），打开时可能会变慢、卡死、闪退,是否继续打开？</string>
+    <string name="file_explorer_dialog_message3">该文件%1$s已经存在，是否继续保存？</string>
+    <string name="file_explorer_popup_menu_button">菜单</string>
+    <string name="file_explorer_sort_button">排序</string>
+    <string name="root_external_storage_explorer_title">请选择目录</string>
+</resources>

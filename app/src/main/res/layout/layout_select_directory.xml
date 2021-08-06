@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyFileExplorerActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rootExternalStorageDirectoryExplorerTitleBar">
+        <TextView
+            android:layout_height="wrap_content"
+            android:id="@+id/rootExternalStorageDirectoryExplorerTitle"
+            android:text="@string/root_external_storage_explorer_title"
+            android:gravity="center_horizontal" android:layout_width="match_parent"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rootExternalStorageDirectoryListRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rootExternalStorageDirectoryExplorerTitleBar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/fileInfoLinearLayoutBelow"
+        android:layout_alignParentBottom="true"
+        android:gravity="right">
+<!--        <Button
+            android:background="@drawable/button_clicked"
+            android:id="@+id/testChangeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试跳转"
+            android:onClick="changeLayout"/>-->
+        <Button
+            android:background="@drawable/button_clicked"
+            android:id="@+id/rootExternalStorageDirectoryExplorerCancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel_button"
+            android:onClick="cancel"/>
+    </LinearLayout>
+</RelativeLayout>

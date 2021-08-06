@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/new_file_menu" android:title="@string/new_file" android:onClick="newFile"/>
+    <item android:id="@+id/open_file_menu" android:title="@string/open_file" android:onClick="openFile"/>
+    <item android:id="@+id/charset_select_menu" android:title="@string/charset_select" android:onClick="charsetSelect"/>
+    <item android:id="@+id/save_file_menu" android:title="@string/save_file" android:onClick="saveFile"/>
+    <item android:id="@+id/save_as_menu" android:title="@string/save_as" android:onClick="saveAs"/>
+    <item android:id="@+id/quit_app_menu" android:title="@string/quit_app" android:onClick="quitApp"/>
+
+</menu>

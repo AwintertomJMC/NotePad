@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">NotePad</string>
+    <string name="quit_app">Quit app</string>
+    <string name="open_file">Open</string>
+    <string name="save_file">Save</string>
+    <string name="save_as">Save As</string>
+    <string name="new_file">New File</string>
+    <string name="menu_button">Menu</string>
+    <string name="pre_dir">Back</string>
+    <string name="file_explorer_title_read">Open file</string>
+    <string name="file_explorer_new_folder">new folder</string>
+    <string name="file_explorer_current_dir">current dir:</string>
+    <string name="file_explorer_file_name_hint">file name:</string>
+    <string name="file_explorer_file_type_hint">file type:</string>
+    <string name="ok_button">ok</string>
+    <string name="file_explorer_encoding">encoding:</string>
+    <string name="file_explorer_encoding_unknown">unknown</string>
+    <string name="file_explorer_not_impl">click to choose encoding</string>
+    <string name="cancel_button">cancel</string>
+    <string name="file_menu_icon">icon</string>
+    <string name="file_menu_filename">file name</string>
+    <string name="save_file_dialog_title1">Saving file dialog</string>
+    <string name="save_file_dialog_message1">Do you want to save current file:%1$s?</string>
+    <string name="save_file_dialog_message2">Are you sure you want to save file to %1$s?</string>
+    <string name="save_file_dialog_pos_button1">Yes,and create a new file</string>
+    <string name="save_file_dialog_neg_button1">No, but create a new file</string>
+    <string name="cannot_open_file_toast1">File:%1$s does not exist or cannot be found</string>
+    <string name="charset_select">select charset</string>
+    <string name="select_encoding_title">Which encoding would you select to open a file?</string>
+    <string name="save_file_success_toast1">Save file:%1$s success!</string>
+    <string name="new_file_name">untitled</string>
+    <string name="save_file_dialog_title2">Saving file hint</string>
+    <string name="save_file_dialog_warning">The file you want to save may not be text-type file.
+        It probably causes CORRUPTION and DATA LOSS if you overwrite the original file, thus you cannot
+        open the file after saving.Recommend to use "SAVE AS" button to save new contents to new File.
+    </string>
+    <string name="file_explorer_title_save">Save file</string>
+    <string name="file_explorer_root_dir_toast">Reached root directory already!</string>
+    <string name="file_explorer_file_cannot_found_toast">Cannot found file:%1$s</string>
+    <string name="file_explorer_dialog_title1">create a new folder</string>
+    <string name="file_explorer_dialog_message1">Please enter the folder\'s name</string>
+    <string name="file_explorer_dir_already_exists_toast">The folder %1$s already exists</string>
+    <string name="file_explorer_dir_create_success_toast">The folder: %1$s created successfully.</string>
+    <string name="file_explorer_dir_create_failed_toast">Failed to create the folder:%1$s</string>
+    <string name="file_explorer_dialog_title2">Excessive file size warning</string>
+    <string name="file_explorer_dialog_title3">File overwrite warning</string>
+    <string name="file_explorer_dialog_message2">The file size is larger than 100K(actually size:%1$s).Loading it may slow down or crash the app.Continue to open?</string>
+    <string name="file_explorer_dialog_message3">The file %1$s already exists, continue to save?</string>
+    <string name="file_explorer_popup_menu_button">Menu</string>
+    <string name="file_explorer_sort_button">Sort</string>
+    <string name="root_external_storage_explorer_title">Please choose a directory</string>
+
+</resources>
